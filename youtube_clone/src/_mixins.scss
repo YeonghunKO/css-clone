@@ -1,0 +1,34 @@
+@mixin display($display, $columns: none, $align: normal, $gap: 0px) {
+  display: $display;
+  @if $display == 'flex' {
+    flex-direction: column;
+  }
+
+  grid-template-columns: $columns;
+
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin searchBarBorderRadius {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+@mixin borderColor($border, $color, $px: 1px) {
+  #{$border}: solid $px $color;
+}
+
+@mixin transition($target, $speed) {
+  transition: $target $speed;
+}
+
+@mixin heightWidth($min, $height: unset, $width: unset) {
+  @if $min {
+    min-height: $height;
+    min-width: $width;
+  } @else {
+    height: $height;
+    width: $width;
+  }
+}
