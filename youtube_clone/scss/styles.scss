@@ -1,14 +1,6 @@
 @import '_mixins';
 @import '_variables';
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -96,6 +88,8 @@ body {
     @include borderColor(border-bottom, $categoriesBorderColor);
     overflow: hidden;
     grid-area: category;
+    background-color: white;
+    z-index: 0;
 
     .categories__section {
       display: flex;
@@ -125,7 +119,7 @@ body {
     }
   }
   .aside {
-    @include display(flex, $align: center, $gap: 2rem);
+    @include display(flex, $align: center);
     grid-area: aside;
     transition: background-color 150ms;
 
@@ -134,6 +128,7 @@ body {
       text-align: center;
       text-decoration: none;
       color: black;
+      padding: 22px;
 
       &:hover {
         background-color: $categoryBackgroungColor;

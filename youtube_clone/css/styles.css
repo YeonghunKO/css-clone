@@ -1,11 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -79,6 +71,8 @@ body {
   border-bottom: solid 1px #999;
   overflow: hidden;
   grid-area: category;
+  background-color: white;
+  z-index: 0;
 }
 .wrapper .categories .categories__section {
   display: flex;
@@ -108,7 +102,7 @@ body {
   flex-direction: column;
   grid-template-columns: none;
   align-items: center;
-  gap: 2rem;
+  gap: 0px;
   grid-area: aside;
   transition: background-color 150ms;
 }
@@ -117,6 +111,7 @@ body {
   text-align: center;
   text-decoration: none;
   color: black;
+  padding: 22px;
 }
 .wrapper .aside .aside__menu:hover {
   background-color: #ccc;
