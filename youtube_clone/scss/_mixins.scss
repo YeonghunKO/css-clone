@@ -4,7 +4,9 @@
     flex-direction: column;
   }
 
-  grid-template-columns: $columns;
+  @if $columns {
+    grid-template-columns: $columns;
+  }
 
   align-items: $align;
   gap: $gap;
@@ -30,5 +32,19 @@
   } @else {
     height: $height;
     width: $width;
+  }
+}
+
+@mixin respond($breakPoint) {
+  @if $breakPoint == mobie {
+    @media only screen and (max-width: 320px) {
+      @content;
+    }
+  }
+
+  @if $breakPoint == tablet {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
   }
 }
