@@ -319,6 +319,7 @@
   }
 }
 
+// media query setting - mobile
 @include respond($breakPoint: tablet) {
   .header {
     padding: 0.8rem;
