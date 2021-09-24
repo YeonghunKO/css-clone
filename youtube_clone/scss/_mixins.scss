@@ -36,14 +36,14 @@
 }
 
 @mixin respond($breakPoint) {
-  @if $breakPoint == 'mobie' {
-    @media screen and (max-width: 490px) {
+  @if $breakPoint == 'mobile' {
+    @media screen and (max-width: 360px) and (min-width: 110px) {
       @content;
     }
   }
 
   @if $breakPoint == 'tablet' {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) and (min-width: 360px) {
       @content;
     }
   }
